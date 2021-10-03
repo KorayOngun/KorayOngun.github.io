@@ -7,69 +7,93 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
     <title>Document</title>
 </head>
-<body style="background-color: yellow;">
+<body style="background-color: aquamarine;">
+  <nav  class="navbar navbar-expand-lg navbar-light bg-light">
+    <div style="background-color: aquamarine;" class="container-fluid">
+      <a class="navbar-brand" href="index.html">Ana sayfa</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#ilt">İletişim</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="">Fotağraf galerisi</a>
+          </li> 
+          <li class="nav-item">
+            <a class="nav-link active" href="referans.html">Referanslarımız</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="hizmetlerimiz.html">Hizmetlerimiz</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
     <h1 style="text-align: center;">
         Koraypen
     </h1>
-    <p style="text-align: center;font-size: xx-large;">
-      Yapmış olduğumuz işler
-    </p>
-    <div class="row">
-        <div style="margin-top: 20px;" id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
-          <div class="carousel-indicators">
-            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
-            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
-            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3" aria-label="Slide 4"></button>
-            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="4" aria-label="Slide 5"></button>
-          </div>
-          <div class="carousel-inner">
-            <div class="carousel-item active">
-              <img style="height: 800px;width: 100%;" src="camBalkon.jpeg" class="d-block w-100" alt="...">
-              <div class="carousel-caption d-none d-md-block">
-                <h5>Cam balkon</h5>
-                <p>Some representative placeholder content for the first slide.</p>
-              </div>
-            </div>
-            <div class="carousel-item">
-              <img style="height: 800px;width: 100%;" src="panjur.jpeg" class="d-block w-100" alt="...">
-              <div class="carousel-caption d-none d-md-block">
-                <h5>Second slide label</h5>
-                <p>Some representative placeholder content for the second slide.</p>
-              </div>
-            </div>
-            <div class="carousel-item">
-              <img style="height: 800px;width: 100%;" src="pencer.jpg" class="d-block w-100" alt="...">
-              <div class="carousel-caption d-none d-md-block">
-                <h5>Third slide label</h5>
-                <p>Some representative placeholder content for the third slide.</p>
-              </div>
-            </div>
-            <div class="carousel-item">
-              <img style="height: 800px;width: 100%;" src="pencer.jpg" class="d-block w-100" alt="...">
-              <div class="carousel-caption d-none d-md-block">
-                <h5>4 slide label</h5>
-                <p>Some representative placeholder content for the third slide.</p>
-              </div>
-            </div>
-            <div class="carousel-item">
-              <img style="height: 800px;width: 100%;" src="pencer.jpg" class="d-block w-100" alt="...">
-              <div class="carousel-caption d-none d-md-block">
-                <h5>5 slide label</h5>
-                <p>Some representative placeholder content for the third slide.</p>
-              </div>
-            </div>
-          </div>
-          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-          </button>
-          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-          </button>
-        </div>
+    <div class="row" style="margin-top: 100px;">
+
+      <div class="col-sm-1">
+
       </div>
+      <div class="col-sm-10">
+        <div class="row"> 
+            <a style="width: 200px;height: 200px;" href="ekiPencere.jpeg">
+              <img style="width: 200px;height: 200px;border-style: solid;border-radius: 5px;" src="ekiPencere.jpeg" alt="">
+            </a>
+            <a style="width: 200px;height: 200px;margin-left: 150px;" href="insaat.jpeg">
+              <img  style="width: 200px;height: 200px;border-style: solid;border-radius: 5px;" src="insaat.jpeg" alt="">
+            </a>
+            <a style="width: 200px;height: 200px;margin-left: 150px;" href="camBalkon.jpeg">
+              <img  style="width: 200px;height: 200px;border-style: solid;border-radius: 5px;" src="camBalkon.jpeg" alt="">
+            </a>
+            <a style="width: 200px;height: 200px;margin-left: 150px;" href="fabrika.jpeg">
+              <img  style="width: 200px;height: 200px;border-style: solid;border-radius: 5px;" src="fabrika.jpeg" alt="">
+            </a>
+            <a style="width: 200px;height: 200px;margin-left: 150px;" href="panjur.jpeg">
+              <img  style="width: 200px;height: 200px;border-style: solid;border-radius: 5px;" src="panjur.jpeg" alt="">
+            </a>
+        </div>
+        <div class="row" style="margin-top: 50px;">
+            <a style="width: 200px;height: 200px;" href="portAkdeniz2.jpeg">
+              <img style="width: 200px;height: 200px;border-style: solid;border-radius: 5px;" src="portAkdeniz2.jpeg" alt="">
+            </a>
+            <a style="width: 200px;height: 200px;margin-left: 150px;" href="portAkdeniz.jpeg">
+              <img  style="width: 200px;height: 200px;border-style: solid;border-radius: 5px;" src="portAkdeniz.jpeg" alt="">
+            </a>
+            <a style="width: 200px;height: 200px;margin-left: 150px;" href="insaat2.jpeg">
+              <img  style="width: 200px;height: 200px;border-style: solid;border-radius: 5px;" src="insaat2.jpeg" alt="">
+            </a>
+            <a style="width: 200px;height: 200px;margin-left: 150px;" href="fabrika.jpeg">
+              <img  style="width: 200px;height: 200px;border-style: solid;border-radius: 5px;" src="fabrika.jpeg" alt="">
+            </a>
+            <a style="width: 200px;height: 200px;margin-left: 150px;" href="camBalkon2.jpeg">
+              <img  style="width: 200px;height: 200px;border-style: solid;border-radius: 5px;" src="camBalkon2.jpeg" alt="">
+            </a>
+        </div>     
+</div>
+<div id="ilt" style="margin-top: 200px;width: 100%;height: 500px;background-color: black;color: white;" class="row">
+  <div style="margin: 40px;" class="col-sm-6">
+    <h1>ADRES:<a  href="https://www.google.com/maps/place/Koray+Pen/@36.9005875,30.6807671,15z/data=!4m2!3m1!1s0x0:0x4c4224da0842ca5c?sa=X&ved=2ahUKEwjLhZfV5K7zAhUJ36QKHcT0CQMQ_BJ6BAhTEAU" class="btn btn-primary">Navigasyon için tıklayın</a></h1>
+    
+    <h4  style="text-align: left;padding: 5px;">Güvenlik Mahallesi Kazım Karabekir caddesi Küçük İsmail apartmanı 150/D 
+               
+    </h4>
+    <h4>
+      MURATPAŞA/ANTALYA   
+    </h4>
+    <H4>
+      TELEFON: 05358299305   
+    </H4>
+    <h4>
+      Mail: koraypen07@hotmail.com
+    </h4>
+  </div>       
+</div>
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
 </body>
 </html>
