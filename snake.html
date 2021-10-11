@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<div style="position: relative;left: 50%;">
+    <div id="tahta" style="width: 350px;height: 500px;background-color: green;position: relative;right: 175px;">
+        <button id="btn1" style="width: 15px;height: 15px;background-color: black;border-radius: 1px;border-color: white;border-style: solid;position: absolute;left: 100px;top: 5px;" disabled></button>
+        <button id="btn2" style="width: 15px;height: 15px;background-color: black;border-radius: 1px;border-color: white;border-style: solid;position: absolute;left: 80px;top: 5px;" disabled></button>
+        <button id="btn3" style="width: 15px;height: 15px;background-color: black;border-radius: 1px;border-color: white;border-style: solid;position: absolute;left: 60px;top: 5px;" disabled></button>
+        <button id="btn4" style="width: 15px;height: 15px;background-color: black;border-radius: 1px;border-color: white;border-style: solid;position: absolute;left: 40px;top: 5px;" disabled></button>
+        <button id="btn5" style="width: 15px;height: 15px;background-color: black;border-radius: 1px;border-color: white;border-style: solid;position: absolute;left: 20px;top: 5px;" disabled></button>
+        <button id="yem" style="width: 15px;height: 15px;background-color: white;position: relative;left: 50%;"></button>
+    </div>
+</div>
+
+<div style="position: relative;left: 50%;margin-top: 16px;">
+     <button id="up" onclick="up()" style="width: 80px;height: 80px;position: relative;right: 40px;"></button>
+</div>
+<div style="position: relative;left: 50%;margin-top: 16px;">
+    <button id="lft" onclick="left()" style="width: 80px;height: 80px;position: relative;right: 140px;"><=</button>
+    <button id="dwn" onclick="down()" style="width: 80px;height: 80px;position: relative;right: 124px;">=</button>
+    <button id="rght" onclick="right()" style="width: 80px;height: 80px;position: relative;right: 104px;">=> </button>
+</div>
+<label id="lbl" style="color: white;">right</label>
+
+<script>
+
+
+    function right(){
+        var lb = document.getElementById("lbl");
+        lb.innerHTML="right";
+    }
+    function left(){
+        var lb = document.getElementById("lbl");
+        lb.innerHTML="left";
+    }
+    function down(){
+        var lb = document.getElementById("lbl");
+        lb.innerHTML="down";
+    }
+    function up(){
+        var lb = document.getElementById("lbl");
+        lb.innerHTML="up";
+    }
+
+    yem(60,60);
+    var yediMi=false;
+    const setayar = window.setInterval(() => {
+  
+        var lbl  = document.getElementById("lbl").innerHTML;
+        var bas = parseInt(document.getElementById("btn1").style.left);
+        var ym =parseInt(document.getElementById("yem").style.left);
+        var basY=parseInt(document.getElementById("btn1").style.top);
+        var ymY =parseInt(document.getElementById("yem").style.top);
+     
+        if(Math.abs(bas-ym)<8)
+        {
+            if(Math.abs(basY-ymY)<10)
+            {
+                yediMi=true;
+            }else{
+                yediMi=false;
+            }
+        }
+        
+        if(lbl=="right"){
+            myFunction("btn1",20);
+            document.getElementById("lft").disabled=true;
+            document.getElementById("dwn").disabled=false;
+            document.getElementById("up").disabled=false;
+        }
+        if(lbl=="left"){
+            myFunction("btn1",-20);
+            document.getElementById("rght").disabled=true;
+            document.getElementById("dwn").disabled=false;
+            document.getElementById("up").disabled=false;
+        }
+        if(lbl=="up"){
+            myFunctiony("btn1",-20);
+            document.getElementById("dwn").disabled=true;
+            document.getElementById("rght").disabled=false;
+            document.getElementById("lft").disabled=false;
+        }
+        if(lbl=="down"){
+            myFunctiony("btn1",20);
+            document.getElementById("up").disabled=true;
+            document.getElementById("rght").disabled=false;
+            document.getElementById("lft").disabled=false;
+        } 
+        if(yediMi==false){
+
+        }else{
+            do{
+                var k1=Math.floor(Math.random() * 320+1);
+            }while(k1%20!=0);
+            do{
+                var k2 =Math.floor(Math.random() * 450+1);
+            }while(k2%20!=0);
+            yem(k1,k2);
+            yediMi=false;
+        }    
+        
+    }, 100);
+    function myFunction(prm,prm2) {
+        var bt1 = document.getElementById("btn1");
+        var bt2 = document.getElementById("btn2");
+        var bt3 = document.getElementById("btn3");
+        var bt4 = document.getElementById("btn4");
+        var bt5 = document.getElementById("btn5");
+        const x = [bt1,bt2,bt3,bt4,bt5]
+        
+        for(let i=4;i>0;i--){
+            x[i].style.left=x[i-1].style.left;
+            x[i].style.top=x[i-1].style.top;
+        }
+        
+        var a = document.getElementById(prm);
+        a.style.position="absolute";
+        var b = a.style.left.replace("px","");
+        var mesafe =prm2;
+        var c =  parseInt(a.style.left)+parseInt(mesafe);
+        a.style.left=c+"px";
+        
+    }
+    function myFunctiony(prm,prm2) {
+        var bt1 = document.getElementById("btn1");
+        var bt2 = document.getElementById("btn2");
+        var bt3 = document.getElementById("btn3");
+        var bt4 = document.getElementById("btn4");
+        var bt5 = document.getElementById("btn5");
+        const x = [bt1,bt2,bt3,bt4,bt5]
+        
+        for(let i=4;i>0;i--){
+            x[i].style.left=x[i-1].style.left;
+            x[i].style.top=x[i-1].style.top;
+        }
+        
+        var a = document.getElementById(prm);
+        a.style.position="absolute";
+        var b = a.style.top.replace("px","");
+        var mesafe =prm2;
+        var c =  parseInt(a.style.top)+parseInt(mesafe);
+        a.style.top=c+"px";
+        
+    }
+    function yem(x,y){
+        var ym = document.getElementById("yem");
+        ym.style.position="relative";
+        ym.style.left=x+"px";
+        ym.style.top=y+"px";
+    }
+</script>
+
+
+</body>
+</html>
+
+
